@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import router from './router';
-
-import Vue from './imports.js';
+import '@/language/multiLanguange.js';
 
 Vue.config.productionTip = false
 

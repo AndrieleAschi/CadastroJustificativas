@@ -21,14 +21,16 @@ export default new MLCreate({
   save: process.env.NODE_ENV === 'production',
   languages: [
     new MLanguage('pt').create({
+      language: 'br',
       titleListUnsubscribe: 'Por que você quer se descadastrar?',
       titleUnsubscrible: 'Nós sentiremos sua falta',
       txtUnsubscrible: 'Lamentamos ver você indo embora.Para que possamos melhorar nossa comunicação, gostaríamos de saber os motivos que o levaram a tomar essa decisão. O questionário é opcional.',
       emailUnsubscrible: 'O descadastramento será efetuado para o e-mail:',
-      buttonUnsubscrible: 'Descadastrar',
+      buttonUnsubscrible: 'Descadastrar'
     }),
 
     new MLanguage('en').create({
+      language: 'en',
       titleListUnsubscribe: 'Why do you want to unsubscribe?',
       titleUnsubscrible: 'We will miss you',
       txtUnsubscrible: 'We"re sorry to see you go. To improve our communication, we would like to know the reasons that led you to make this decision. The questionnaire is optional.',
@@ -37,6 +39,7 @@ export default new MLCreate({
     }),
 
     new MLanguage('es').create({
+      language: 'es',
       titleListUnsubscribe: '¿Por qué quieres darte de baja?',
       titleUnsubscrible: 'Te extrañaremos',
       txtUnsubscrible: 'Lamentamos que te vayas, para mejorar nuestra comunicación, nos gustaría conocer los motivos que te llevaron a tomar esta decisión. El cuestionario es opcional.',
