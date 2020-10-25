@@ -31,7 +31,6 @@
     </multiselect>
   </div>
 </template>
-
 <script>
 import CountryFlag from 'vue-country-flag'
 import Multiselect from 'vue-multiselect'
@@ -103,21 +102,18 @@ export default {
 }
 </script>
 <style lang="scss">
-
 .select__language {
   padding: 0px 0px;
   margin-bottom: 15px;
-  width: 20%;
-
+  width: 30%;
   .multiselect {
+    outline: red;
     ul {
       padding: 0;
-      background: #ffffff;
     }
-
-    .multiselect__content-wrapper{
-      max-height: 0 !important;
-      background: #ffffff;
+    .multiselect__content-wrapper {
+      border: 2px solid #EEEEEE;
+      max-width: 218px !important;
     }
     .multiselect__tags {
       background: #ffffff;
@@ -125,34 +121,26 @@ export default {
       padding: 0;
       overflow: hidden;
       border: 2px solid #EEEEEE;
-      border-radius: 5px;
     }
-    .multiselect__element { //bandeiras
+    .multiselect__element {
       list-style: none;
-
       .multiselect__option {
         cursor: pointer;
-        background: #ffffff;        
-
-        .country-text { // texto
+        .country-text {
           position: absolute;
           padding: 10px 0;
           text-align: center;
-          background: #ffffff;
         }
       }
     }
-    .multiselect__single { // bandeira
-      background: #ffffff;
+    .multiselect__single {
       cursor: pointer;
-
-      .country-text { // texto
+      .country-text {
         position: absolute;
         padding: 10px 0;
         text-align: center;
-        background: #ffffff;
       }
     }
-  } 
+  }
 }
 </style>

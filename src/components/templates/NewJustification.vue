@@ -1,17 +1,18 @@
 <template>
   <div class="form">
+    <v-container>
     <div class="title">
       <h2>Adicionar nova justificativa</h2>
     </div>
     <form @submit="addItem">
       <v-col 
-        cols="8" 
-        md="8">
+        cols="12" 
+        md="12">
         <div class="language">
           <v-radio-group v-model="language">
             <v-radio value="br">
               <template v-slot:label>
-                <div>
+                <div class="select-country">
                   <img src="@/assets/img/br.jpg"> 
                   <span>Português</span>
                 </div>
@@ -19,7 +20,7 @@
             </v-radio>
             <v-radio value="es">
               <template v-slot:label>
-                <div>
+                <div class="select-country">
                   <img src="@/assets/img/esp.png"> 
                   <span>Espanhol</span>
                 </div>
@@ -27,7 +28,7 @@
             </v-radio>
             <v-radio value="en">
               <template v-slot:label>
-                <div>
+                <div class="select-country">
                   <img src="@/assets/img/usa.png">
                   <span>Inglês</span>
                 </div>
@@ -55,6 +56,7 @@
           class="btn btn-info">
       </v-col>
     </form>
+    </v-container>
   </div>
 </template>
 
@@ -103,41 +105,47 @@ export default {
 }
 </script>
 <style lang="scss">
-    .btn-info {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 21px;
-      align-items: center;
-      text-align: center;
-      color: #C2C2C2;
-      border-radius: 50px;
-      border: 1px solid #C2C2C2;
-      background: #FFFFFF;
-      box-sizing: border-box;
-      padding: 10px 60px;
-    }
+.btn-info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #C2C2C2;
+  border-radius: 50px;
+  border: 1px solid #C2C2C2;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  padding: 10px 60px;
+}
 
-    .btn {
-      float: right;
-    }
+.btn-info:focus {
+  border: 1px solid #C2C2C2 !important;
+  border-radius: 50px !important;
+  outline: red;
+}
 
-    h3 {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 21px;
-    }
+.btn {
+  float: right;
+}
 
-    .language {
-      img {
-        max-width: 20px;
-      }
-      span {
-        float: right;
-        margin: 0 5px;
-      }
-    }
+h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.select-country {
+  img {
+    max-width: 20px;
+  }
+  span {
+    float: right;
+    margin: 0 5px;
+  }
+}
 </style>

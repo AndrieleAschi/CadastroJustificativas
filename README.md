@@ -1,4 +1,4 @@
-# Cadastro Justificativa
+# Cadastro de Justificativas e Descadastro de e-mail.
 
 ## Project setup
 ```

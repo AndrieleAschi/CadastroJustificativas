@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <NewJustification v-on:add-item-event="addItemMethod"/>
+    <hr/>
     <Unsubscribe v-bind:justifications="justifications"/>
   </v-app>
 </template>
-
 <script>
 import Unsubscribe from '@/components/templates/Unsubscribe'
 import NewJustification from '@/components/templates/NewJustification'
@@ -17,15 +17,12 @@ export default {
   },
   data() {
     return {
-        justifications : [],
+      justifications : [],
     }
   },
   methods: {
-      addItemMethod(newJustItem){
-          //spread operator adds value to the end of the array
-          //this.todo_items = [...this.todo_items, newTodoItem]
-          //Use unshift: modifies the existing array by adding the value to the front:
-          this.justifications.unshift(newJustItem);
+    addItemMethod(newJustItem){
+      this.justifications.unshift(newJustItem);
     },
   },
   mounted(){
@@ -34,20 +31,28 @@ export default {
           this.justifications = JSON.parse(localStorage.getItem('justifications'));
   },
   watch: {
-      justifications: {
-          handler() {
-              console.log('Todo Items array changed!');
-              localStorage.setItem('justifications', JSON.stringify(this.justifications));
-          },
-          deep: true,
+    justifications: {
+      handler() {
+        console.log('Todo Items array changed!');
+        localStorage.setItem('justifications', JSON.stringify(this.justifications));
       },
+      deep: true,
+    },
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
- #app {
+<style  lang="scss" scoped>
+#app {
   padding: 20px;
- }
+
+  hr {
+    margin: 5% 0;
+    width: 50%;
+    border-width: 0; 
+    height: 1px;
+    border-top-width: 1px;
+    margin-left: 25%
+
+  }
+}
 </style>
